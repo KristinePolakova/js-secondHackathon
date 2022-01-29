@@ -1,3 +1,17 @@
+/* body {
+    background-image: url("../images/paws-small.png");
+    background-repeat: repeat;
+  
+}
+  } */
+
 .font {
     font-family: "Ink Free";
+    font-size: 40px;
+    align-items: end;
+    color: #ef314c;
 }
+
+.card {
+    border-color: white;
+  }
