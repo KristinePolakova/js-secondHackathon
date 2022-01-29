@@ -14,77 +14,58 @@
 
 <body>
 
-  <head>
-    <div class="container">
+<header class="header-size">
 
-      <div class="wrapper-first-section">
+    <nav class="navbar navbar-expand-lg paws-bcg">
 
-        <div class="row navigation-bar d-flex align-items-center justify-content-between">
+        <div class="container px-4">
 
-          <div class="col-3 nav-bar-items">
-            <a class="navbar-brand" href="index1.html">
-              <img class="logo-cat" src="images/cat_logo_final_task_PNG-removebg-preview.png" alt="LOGO">
-            </a>
-          </div>
+            <a class="navbar-brand mt-2" href="index.html"><img src="./images/purrfect-logo-openfile-60.png" id="logo" class="img-responsive" alt="Purrfect Logo"></a>                  
+              
+              <div class="collapse navbar-collapse justify-content-end align-end" id="navbarNav">
+                <ul class="navbar-nav align-bottom">
+                  
+                  <li class="nav-item active">
+                    <a class="nav-link font" href="#"
+                      >Home <span class="sr-only"></span></a>
+                  </li>
 
-          <div class="col-9 nav-bar-items">
-            <div>
-              <ul class="nav justify-content-end navbar-light" id="nav-items-grey">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index1.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index2.html">Articles</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="chat.html">Chat</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="form.html">Register</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="index6.html">About us</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+                  <li class="nav-item">
+                    <a class="nav-link font" href="./three_categories.html">Categories</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link font" href="./cart.html">Cart</a>
+                  </li>
+
+                </ul>
+              </div>
+              
         </div>
-      </div>
-
-      <div>
-        <hr class="solid">
-      </div>
-
-      <div class="wrapper-mid-section">
-
-        <section id="breadcrumb">
-          <div class="row pb-4">
-            <div class="col-sm-12">
-              <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                  <li class="breadcrumb-item"><a href="three_categories.html">Categories</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Play with your cat</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-        </section>
-  </head>
+    </nav> 
+</header>
 
   <main>
 
-    <div class="container d-flex flex-column justify-content-between">
-
+    <div class="container mt-3 cat-toys d-flex flex-column justify-content-between">
+      <section id="breadcrumb">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="three_categories.html">Categories</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Playing with your cat</li>
+          </ol>
+        </nav>
+      </section>
       <h4>Playing with your cat</h4>
 
-      <div class="row media d-flex mt-2">
-        <div class="col-2">
+      <div class="row media d-flex mt-2 justify-content-between">
+        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5 col-xs-5">
           <img
             src="https://images.pexels.com/photos/9278390/pexels-photo-9278390.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
-            class="mr-3" width="200" height="200" alt="...">
+            class="p-2" width="200" height="200" alt="...">
         </div>
-        <div class="col-10">
+        <div class="col-xl-10 col-lg-10 col-md-8 col-sm-7 col-xs-7">
           <div class="media-body mx-3">
             <p class="article-text">Cat ipsum dolor sit amet, mrow claw at curtains stretch and yawn nibble on tuna
               ignore human bite human hand yet there's a forty year old lady there let us feast and eat the rubberband.
@@ -104,25 +85,90 @@
         <hr class="solid-2-page shorter">
       </div>
 
-      <div class="row first-row d-flex">
+<div>
+  <div class="row first-row d-flex justify-content-between">
 
-        <div class="col">
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 
-          <div class="card product-card" style="width: 13rem;">
-            <a href="./product.html">
-              <img class="card-img-top" src="./images/product-img/bigCatjpeg.jpeg" alt="Card image cap">
-            </a>
+      <div class="card product-card">
+        <a href="./product.html">
+          <img class="card-img-top" src="./images/product-img/bigCatjpeg.jpeg" alt="Card image cap">
+        </a>
 
+        <div class="card-body text-center">
+          <h5 class="card-title">Paper Tunnel</h5>
+          <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
+          <button type="button" class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <div class="card product-card">
+        <img class="card-img-top"
+          src="https://media.istockphoto.com/photos/an-adult-cat-lies-next-to-the-skeins-of-yarn-picture-id1296789140?k=20&m=1296789140&s=612x612&w=0&h=Kx1WeW6tg8XqkrYfxBzgZtvVSZIafObLazFFIZkso9Y="
+          alt="Card image cap">
+        <div class="card-body text-center ">
+          <h5 class="card-title">Rolling toy</h5>
+          <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
+          <button type="button" class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <div class="card product-card">
+        <img class="card-img-top"
+          src="https://media.istockphoto.com/photos/grey-cat-and-scratching-post-picture-id640336874?s=612x612"
+          alt="Card image cap">
+        <div class="card-body text-center ">
+          <h5 class="card-title">Sleeping toy</h5>
+          <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
+          <button type="button" class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <div class="card product-card">
+        <img class="card-img-top"
+          src="https://media.istockphoto.com/photos/funny-beautiful-cat-picture-id686553780?k=20&m=686553780&s=612x612&w=0&h=rHQ9iucwyUzvh9040ahi6sZI5tHgYt0717gqDhYlx8M="
+          alt="Card image cap">
+        <div class="card-body text-center ">
+          <h5 class="card-title">Mouse toy</h5>
+          <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
+          <button type="button" class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+      <div class="card product-card">
+        <img class="card-img-top"
+          src="https://media.istockphoto.com/photos/playful-cat-picture-id618341526?k=20&m=618341526&s=612x612&w=0&h=1Qq_fiCsFBEKr0RGi3elMvi6p8kuXL3xRb-C3eUC_4g="
+          alt="Card image cap">
+        <div class="card-body text-center ">
+          <h5 class="card-title">Round toy</h5>
+          <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
+          <button type="button" class="btn btn-success">Add to cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <div class="row mt-3 second-row d-flex justify-content-between">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card product-card">
+            <img class="card-img-top"
+              src="https://media.istockphoto.com/photos/playful-cat-picture-id618341526?k=20&m=618341526&s=612x612&w=0&h=1Qq_fiCsFBEKr0RGi3elMvi6p8kuXL3xRb-C3eUC_4g="
+              alt="Card image cap">
             <div class="card-body text-center ">
-              <h5 class="card-title">Paper Tunnel</h5>
+              <h5 class="card-title">Round toy</h5>
               <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
               <button type="button" class="btn btn-success">Add to cart</button>
             </div>
           </div>
-
         </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card product-card">
             <img class="card-img-top"
               src="https://media.istockphoto.com/photos/an-adult-cat-lies-next-to-the-skeins-of-yarn-picture-id1296789140?k=20&m=1296789140&s=612x612&w=0&h=Kx1WeW6tg8XqkrYfxBzgZtvVSZIafObLazFFIZkso9Y="
               alt="Card image cap">
@@ -133,8 +179,8 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card product-card">
             <img class="card-img-top"
               src="https://media.istockphoto.com/photos/grey-cat-and-scratching-post-picture-id640336874?s=612x612"
               alt="Card image cap">
@@ -145,8 +191,8 @@
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card product-card">
             <img class="card-img-top"
               src="https://media.istockphoto.com/photos/funny-beautiful-cat-picture-id686553780?k=20&m=686553780&s=612x612&w=0&h=rHQ9iucwyUzvh9040ahi6sZI5tHgYt0717gqDhYlx8M="
               alt="Card image cap">
@@ -157,9 +203,8 @@
             </div>
           </div>
         </div>
-
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+          <div class="card product-card">
             <img class="card-img-top"
               src="https://media.istockphoto.com/photos/playful-cat-picture-id618341526?k=20&m=618341526&s=612x612&w=0&h=1Qq_fiCsFBEKr0RGi3elMvi6p8kuXL3xRb-C3eUC_4g="
               alt="Card image cap">
@@ -171,73 +216,10 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="row mt-3 second-row d-flex justify-content-between">
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
-            <img class="card-img-top"
-              src="https://images.pexels.com/photos/160755/kittens-cats-foster-playing-160755.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-              alt="Card image cap">
-            <div class="card-body text-center ">
-              <h5 class="card-title">Flying toy</h5>
-              <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
-              <button type="button" class="btn btn-success">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
-            <img class="card-img-top"
-              src="https://media.istockphoto.com/photos/an-adult-cat-lies-next-to-the-skeins-of-yarn-picture-id1296789140?k=20&m=1296789140&s=612x612&w=0&h=Kx1WeW6tg8XqkrYfxBzgZtvVSZIafObLazFFIZkso9Y="
-              alt="Card image cap">
-            <div class="card-body text-center ">
-              <h5 class="card-title">Rolling toy</h5>
-              <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
-              <button type="button" class="btn btn-success">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
-            <img class="card-img-top"
-              src="https://media.istockphoto.com/photos/grey-cat-and-scratching-post-picture-id640336874?s=612x612"
-              alt="Card image cap">
-            <div class="card-body text-center ">
-              <h5 class="card-title">Sleeping toy</h5>
-              <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
-              <button type="button" class="btn btn-success">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
-            <img class="card-img-top"
-              src="https://media.istockphoto.com/photos/funny-beautiful-cat-picture-id686553780?k=20&m=686553780&s=612x612&w=0&h=rHQ9iucwyUzvh9040ahi6sZI5tHgYt0717gqDhYlx8M="
-              alt="Card image cap">
-            <div class="card-body text-center ">
-              <h5 class="card-title">Mouse toy</h5>
-              <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
-              <button type="button" class="btn btn-success">Add to cart</button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card product-card" style="width: 13rem;">
-            <img class="card-img-top"
-              src="https://media.istockphoto.com/photos/cats-paw-with-sharp-claws-on-the-rope-picture-id1130352722?k=20&m=1130352722&s=612x612&w=0&h=4Suk8AmyPxJ4GYX2ItyKxw5qV3PNoqOKKZFNGdFn6vQ="
-              alt="Card image cap">
-            <div class="card-body text-center ">
-              <h5 class="card-title">String toy</h5>
-              <p class="card-text text-danger"><strong>3.50 EUR</strong></p>
-              <button type="button" class="btn btn-success">Add to cart</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <!-- </div> -->
 
     </div>
+  </div>
 
   </main>
 
