@@ -28,11 +28,11 @@
     border-color: white;
   }
 
-.cat-toys {
-    width: 100%;
-}
-
 .categories-images {
     width: 200px;
     height: 200px;
+}
+
+.first-row, .second-row {
+    width: 98%;
 }
