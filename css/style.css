@@ -7,6 +7,9 @@
 
 .font {
     font-family: "Ink Free";
+    font-size: 40px;
+    align-items: end;
+    color: #ef314c;
 }
 
 .article-text {
@@ -26,10 +29,6 @@
     text-decoration: none;
     font-size: 1.5rem;
 }
-    /* font-size: 40px;
-    align-items: end;
-    color: #ef314c;
-} */
 
 .card {
     border-color: white;
