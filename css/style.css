@@ -1,3 +1,36 @@
+/* body {
+    background-image: url("../images/paws-small.png");
+    background-repeat: repeat;
+  
+}
+  } */
+
 .font {
     font-family: "Ink Free";
 }
+
+.article-text {
+    text-align: justify;
+}
+
+.card-img-top {
+    height: 8rem;
+}
+
+.product-card {
+    height: 17rem;
+}
+
+.category-names {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+    /* font-size: 40px;
+    align-items: end;
+    color: #ef314c;
+} */
+
+.card {
+    border-color: white;
+  }
