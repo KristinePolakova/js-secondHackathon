@@ -22,6 +22,7 @@
 
 .product-card {
     height: 17rem;
+    width: 13rem;
 }
 
 .category-names {
@@ -33,3 +34,12 @@
 .card {
     border-color: white;
   }
+
+.cat-toys {
+    width: 100%;
+}
+
+.categories-images {
+    width: 200px;
+    height: 200px;
+}
