@@ -33,6 +33,16 @@
     height: 200px;
 }
 
+/* test cart Laura */
+
 .first-row, .second-row {
     width: 98%;
+}
+
+.media-body {
+    margin-left: 20px;
+}
+
+.row-1, .row-2, .row-3, .row-4, .row-5 {
+    border: 1px solid darkgray;
 }
