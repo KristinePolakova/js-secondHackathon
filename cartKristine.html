@@ -116,20 +116,20 @@
                             <td>Cat Snaks</td>
                             <td>
                                 <div class="col-md-5 d-flex">
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown(); quantityChangeProduct1();">
                                         <i class="fas fa-minus"></i>
                                     </button>
-                                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                                    <input id="product1Quantity" min="0" name="quantity" value="1" type="number"
                                         class="form-control form-control-sm quantity-input"/>
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp(); quantityChangeProduct1();">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </td>
-                            <td class="price">5.00</td>
-                            <td class="product-total-price">5.00</td>
+                            <td class="price" id="product-1-price">5.00</td>
+                            <td class="product-total-price" id="product1TotalPrice">5.00</td>
                             <td><button class="btn btn-danger" onclick="removeProduct1()">Remove</button></td>
                           </tr>
                           <tr id="product-2" class="cart-row">
@@ -138,20 +138,20 @@
                             <td>Paper Tunell</td>
                             <td>
                                 <div class="col-md-5 d-flex">
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown(); quantityChangeProduct2();">
                                         <i class="fas fa-minus"></i>
                                     </button>
-                                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                                    <input id="product2Quantity" min="0" name="quantity" value="1" type="number"
                                         class="form-control form-control-sm quantity-input"/>
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp(); quantityChangeProduct2();">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </td>
-                            <td class="price">9.50</td>
-                            <td class="product-total-price">9.50</td>
+                            <td class="price" id="product-2-price">9.50</td>
+                            <td class="product-total-price" id="product2TotalPrice">9.50</td>
                             <td><button class="btn btn-danger" onclick="removeProduct2()">Remove</button></td>
                           </tr>
                           <tr id="product-3" class="cart-row">
@@ -160,27 +160,27 @@
                             <td>Fish</td>
                             <td>
                                 <div class="col-md-5 d-flex">
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown(); quantityChangeProduct3();">
                                         <i class="fas fa-minus"></i>
                                     </button>
-                                    <input id="form1" min="0" name="quantity" value="1" type="number"
+                                    <input id="product3Quantity" min="0" name="quantity" value="1" type="number"
                                         class="form-control form-control-sm quantity-input"/>
-                                    <button class="btn btn-link px-2"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                    <button class="btn btn-link px-2 quantity-change"
+                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp(); quantityChangeProduct3();">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </td>
-                            <td class="price">8.00</td>
-                            <td class="product-total-price">8.00</td>
+                            <td class="price" id="product-3-price">8.00</td>
+                            <td class="product-total-price" id="product3TotalPrice">8.00</td>
                             <td><button class="btn btn-danger" onclick="removeProduct3()">Remove</button></td>
                           </tr>
                         </tbody>
                       </table>
                     </div>
                     <div class="col-md-10 d-flex justify-content-end cart-total">
-                      <h2>Total: <span class="cart-total-price">0.00</span></h2>
+                      <h2>Total: <span class="cart-total-price" id="totalPrice">0.00</span></h2>
                     </div>
                   </div>
                   </div>
