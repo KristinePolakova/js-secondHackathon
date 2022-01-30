@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Purrfect Home Page</title>
     <!-- CSS only -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link
@@ -15,17 +15,38 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+      <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="container" style="margin-top: 130px;">
+    <div class="container">
+    <header class="header-size">
+        <nav class="navbar navbar-expand-lg paws-bcg">
+                <a class="navbar-brand mt-2" href="index.html"><img src="./images/purrfect-logo-openfile-60.png" id="logo" class="img-responsive" alt="Purrfect Logo"></a>                  
+                  <div class="collapse navbar-collapse justify-content-end align-end" id="navbarNav">
+                    <ul class="navbar-nav align-bottom">
+                      <li class="nav-item ">
+                        <a class="nav-link font" href="index.html"
+                          >Home <span class="sr-only"></span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link font" href="./three_categories.html">Categories</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link font" href="./cart.html">Cart</a>
+                      </li>
+                    </ul>
+                  </div>
+        </nav> 
+    </header>
         <main>
           <section id="breadcrumb">
-            <div class="row pb-4">
+            <div class="row p-2">
               <div class="col-sm-12">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="home-page.html">Home</a></li>
-                    <li class="breadcrumb-item"><a href="three_categories.html">Playing with your cat</a></li>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="three_categories.html">Categories</a></li>
+                    <li class="breadcrumb-item"><a href="one_category.html">Playing with your cat</a></li>
                     <li class="breadcrumb-item active" aria-current="page">Product</li>
                   </ol>
                 </nav>
@@ -33,7 +54,7 @@
             </div>
           </section>
           <div>
-            <h2>Paper Tunnel</h2>
+            <h2 class="font">Paper Tunnel</h2>
           </div>
             <div class="row">
                 <div class="col-6 col-sm-12 col-md-6 " id="fancybox-big-picture">
@@ -133,7 +154,7 @@
                 </div>
               </div>
             </div>
-            <div class="row p-4">
+            <div class="row p-4 mb-4">
                 <div class="col-md-4 text-center">
                     <h3 class="text-danger">9.99 Eur</h3>
                 </div>
@@ -142,6 +163,11 @@
                 </div>
             </div>
         </main>
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div>
+              <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
+            </div>
+          </footer>
       </div>
       
       <!-- JavaScript Bundle with Popper -->

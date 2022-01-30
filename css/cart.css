@@ -1,0 +1,53 @@
+
+
+.user-input-area {
+    height: 10vh;
+    width: 100%;
+}
+
+.wrapper-chat-general {
+    padding: 5px;
+    min-height: 560px;
+}
+
+.chat-submitted-messages {
+    height: 402px;
+    flex-direction: column;
+    display: flex;
+    overflow-y: scroll;
+    flex-shrink: 0;
+    border: 3px solid lightgrey;
+    margin: 0px;
+}
+
+.user-input-area {
+    height: 158px;
+    border: 3px solid lightgrey;
+    margin-top: 3px;
+}
+
+.username-input, .input-message {
+    border: 3px solid darkgray;
+}
+
+.username-submitted, .submitted-message, .timestamp, label {
+    font-size: 13px;
+}
+
+/* .username-submitted {
+    font-weight: bold;
+} */
+
+.new-message {
+    /* background-color: rgb(238, 215, 215);
+    border: 3px solid lightgrey; */
+    height: fit-content;
+}
+
+.wrapper-first-section {
+    min-height: 6vh;
+}
+
+.wrapper-mid-section {
+    min-height: 80vh;
+}
