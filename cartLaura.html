@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Laura</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel-rtl/">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container d-flex flex-column min-vh-100">
+
+
+        <header class="header-size">
+
+            <nav class="navbar navbar-expand-lg paws-bcg">
+
+                <div class="container px-4">
+
+                    <a class="navbar-brand mt-2" href="index.html"><img src="./images/purrfect-logo-openfile-60.png"
+                            id="logo" class="img-responsive" alt="Purrfect Logo"></a>
+
+                    <div class="collapse navbar-collapse justify-content-end align-end" id="navbarNav">
+                        <ul class="navbar-nav align-bottom">
+
+                            <li class="nav-item active">
+                                <a class="nav-link font" href="#">Home <span class="sr-only"></span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link font" href="./three_categories.html">Categories</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link font" href="./cart.html">Cart</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <main>
+
+            <section id="breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                </nav>
+            </section>
+
+            <h4>Cart</h4>
+
+            <div class="cart-laura mt-3">
+
+                <!-- tabs -->
+
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1"
+                            type="button" role="tab" aria-controls="home" aria-selected="true">Products</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                            role="tab" aria-controls="profile" aria-selected="false">Address</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                            role="tab" aria-controls="contact" aria-selected="false">Summary</button>
+                    </li>
+                </ul>
+
+                <!-- tab content -->
+
+                <div class="tab-content" id="myTabContent">
+
+                    <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+
+                        <div class="container" id="product-list-in-cart">
+
+                            <div class="row row-1 labels m-3 d-flex align-items-center">
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                    <h6>Product</h6>
+                                </div>
+                                <div class="col">
+                                    <h6>Qty</h6>
+                                </div>
+                                <div class="col">
+                                    <h6>Price</h6>
+                                </div>
+                                <div class="col">
+                                    <h6>Total</h6>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
+
+                            <div class="row row-2 m-3 d-flex align-items-center" id="product1">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/160722/cat-tiger-getiegert-feel-at-home-160722.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="mr-3" width="100" height="100" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>Product 1</p>
+                                </div>
+                                <div class="col">
+                                    <!-- <p>Quantity</p> -->
+                                    <div class="count-input d-flex">
+                                        <div class="col-6">
+                                            <div class="">
+                                                <input type="text" id="product1-count" class="form-control"
+                                                    id="inputZip">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-3">
+                                            <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
+                                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                                onclick="calculateTotalSumProduct1()">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product1-price-per-item"><strong>5.39 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product1-price-all-items"><strong>6.17 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="removeProduct1()">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="row row-3 labels m-3 d-flex align-items-center" id="product2">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/7211201/pexels-photo-7211201.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="mr-3" width="100" height="100" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>Product 2</p>
+                                </div>
+                                <div class="col">
+                                    <div class="count-input d-flex">
+                                        <div class="col-3">
+                                            <div class="">
+                                                <input type="number" id="product2-count" class="form-control"
+                                                    placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-3">
+                                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                                onclick="calculateTotalSumProduct2()">Update cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product2-price-per-item"><strong>9.99 </strong><span
+                                            class="text-secondary"> EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger"><strong id="product2-price-all-items"></strong><span
+                                            class="text-secondary"> EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="removeProduct2()">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="row row-4 labels m-3 d-flex align-items-center" id="product3">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/7508190/pexels-photo-7508190.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="mr-3" width="100" height="100" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>Product 3</p>
+                                </div>
+                                <div class="col">
+                                    <!-- <p>Quantity</p> -->
+                                    <div class="count-input d-flex">
+                                        <div>
+                                            <p><strong id="product3-count">0 </strong></p>
+                                        </div>
+                                        <div class="mx-3">
+                                            <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
+                                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                                onclick="">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product3-price-per-item"><strong>12.25 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product3-price-all-items"><strong>12.25 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="removeProduct3()">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="row row-5 labels m-3 d-flex align-items-center" id="product4">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/2361952/pexels-photo-2361952.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="mr-3" width="100" height="100" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>Product 4</p>
+                                </div>
+                                <div class="col">
+                                    <!-- <p>Quantity</p> -->
+                                    <div class="count-input d-flex">
+                                        <div>
+                                            <p><strong id="product4-count">0 </strong></p>
+                                        </div>
+                                        <div class="mx-3">
+                                            <button class="btn btn-outline-secondary btn-sm" type="button">-</button>
+                                            <button class="btn btn-outline-secondary btn-sm" type="button">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="col">
+                                    <p class="text-danger" id="product4-price-per-item"><strong>5.39 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product4-price-all-items"><strong>6.17 </strong><span
+                                            class="text-secondary">EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="removeProduct4()">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="row row-5 labels m-3 d-flex align-items-center" id="product5">
+                                <div class="col">
+                                    <img src="https://images.pexels.com/photos/1715092/pexels-photo-1715092.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                        class="mr-3" width="100" height="100" alt="...">
+                                </div>
+                                <div class="col">
+                                    <p>Product 5</p>
+                                </div>
+                                <div class="col">
+                                    <div class="count-input d-flex">
+                                        <div class="col-3">
+                                            <div class="">
+                                                <input type="number" id="product5-count" class="form-control"
+                                                    placeholder="0">
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mx-3">
+                                            <button class="btn btn-outline-secondary btn-sm" type="button"
+                                                onclick="calculateTotalSumProduct5()">Update cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger" id="product5-price-per-item"><strong>9.99 </strong><span
+                                            class="text-secondary"> EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <p class="text-danger"><strong id="product5-price-all-items"></strong><span
+                                            class="text-secondary"> EUR</span></p>
+                                </div>
+                                <div class="col">
+                                    <button type="button" class="btn btn-secondary"
+                                        onclick="removeProduct5()">Remove</button>
+                                </div>
+                            </div>
+
+                            <div class="row total-row m-3 d-flex align-items-center">
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                </div>
+                                <div class="col">
+                                    <h6>Total: <span id="cart-total-amount">0 </span><span
+                                            class="text-secondary"> EUR</span></h6>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                        <div class="media d-flex">
+                            <img src="https://images.pexels.com/photos/1457611/pexels-photo-1457611.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                class="mr-3" width="150" height="150" alt="...">
+                            <div class="media-body">
+                                <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                    ipsa
+                                    molestiae nemo voluptatibus quia quos, rerum asperiores sed, facilis a voluptates
+                                    itaque dicta, eum
+                                    hic est et neque nostrum repellendus, rerum asperiores sed, facilis a voluptates
+                                    itaque dicta. Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa molestiae nemo
+                                    voluptatibus quia
+                                    quos, rerum asperiores sed, facilis a voluptates itaque dicta, eum hic est et neque
+                                    nostrum
+                                    repellendus, rerum asperiores sed, facilis a voluptates itaque dicta. Lorem ipsum
+                                    dolor sit amet
+                                    consectetur adipisicing elit. Impedit ipsa molestiae nemo voluptatibus quia quos,
+                                    rerum asperiores
+                                    sed, facilis a voluptates itaque dicta, eum hic est et neque nostrum repellendus,
+                                    rerum asperiores
+                                    sed, facilis a voluptates itaque dicta. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
+                        <div class="media d-flex">
+                            <img src="https://images.pexels.com/photos/1447885/pexels-photo-1447885.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                                class="mr-3" width="150" height="150" alt="...">
+                            <div class="media-body">
+                                <p class="article-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                    ipsa
+                                    molestiae nemo voluptatibus quia quos, rerum asperiores sed, facilis a voluptates
+                                    itaque dicta, eum
+                                    hic est et neque nostrum repellendus, rerum asperiores sed, facilis a voluptates
+                                    itaque dicta. Lorem
+                                    ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsa molestiae nemo
+                                    voluptatibus quia
+                                    quos, rerum asperiores sed, facilis a voluptates itaque dicta, eum hic est et neque
+                                    nostrum
+                                    repellendus, rerum asperiores sed, facilis a voluptates itaque dicta. Lorem ipsum
+                                    dolor sit amet
+                                    consectetur adipisicing elit. Impedit ipsa molestiae nemo voluptatibus quia quos,
+                                    rerum asperiores
+                                    sed, facilis a voluptates itaque dicta, eum hic est et neque nostrum repellendus,
+                                    rerum asperiores
+                                    sed, facilis a voluptates itaque dicta. Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div>
+                <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/cartLaura.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
