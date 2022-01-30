@@ -1,3 +1,20 @@
+const price = document.getElementById("price")
+// const sumPrice = document.getElementById("sum-price")
+const count = document.getElementById("form1")
+
+let sumPrice = []
+
+function addTotalPrice() {
+  
+}
+
+function decrement() {
+   count--
+   form1.innerHTML = count
+}
+
+
+
 function addMessage() {
 
   const usernameInput = document.getElementById('username-input');
@@ -53,17 +70,3 @@ function addMessage() {
 
 
 
-var triggerTabList = [].slice.call(document.querySelectorAll('#myTab button'))
-triggerTabList.forEach(function (triggerEl) {
-  var tabTrigger = new bootstrap.Tab(triggerEl)
-
-  triggerEl.addEventListener('click', function (event) {
-    event.preventDefault()
-    tabTrigger.show()
-  })
-})
-var triggerEl = document.querySelector('#myTab button[data-bs-target="#profile"]')
-bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
-
-var triggerFirstTabEl = document.querySelector('#myTab li:first-child button')
-bootstrap.Tab.getInstance(triggerFirstTabEl).show() // Select first tab
