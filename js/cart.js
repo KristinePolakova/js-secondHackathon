@@ -1,3 +1,9 @@
+function removeProduct1() {
+  const product = document.getElementById('product1');
+  product1.remove();
+};
+
+
 const price = document.getElementById("price")
 // const sumPrice = document.getElementById("sum-price")
 const count = document.getElementById("form1")
@@ -15,7 +21,7 @@ function decrement() {
 
 
 
-function addMessage() {
+function addAddress() {
 
   const usernameInput = document.getElementById('username-input');
   const messageInput = document.getElementById('input-message');
@@ -25,45 +31,27 @@ function addMessage() {
       return false;
   }
 
-  var timestamp = new Date();
-  let someDate = timestamp.toDateString();
-  let someTime = timestamp.toLocaleTimeString();
-
-  console.log(someDate, someTime)
-
-  const newMessage = `
-  <div class="row m-1 new-message">
-
-      <div class="container">
-
-          <div class="row d-flex">
-              <div class="col-1 col-md-2 col-sm-2">
-                <h5>Shipping address</h5>
-            
-                  <p class="username-submitted">${usernameInput.value}</p>
-              </div>
-          </div>
-
-          <div class="row pt-1">
-              <form action="#">
-                      <div class="col">
-                      <h5>Billing address</h5>
-                          <p class="submitted-message">${messageInput.value}</p>
-                      </div>
-              </form>
-          </div>
-      </div>
-  </div>    
+  const newShippingAddress = `
+  
+                    <p class="username-submitted">${usernameInput.value}</p>
+                      
   `
+  const newBillingAddress = `
+  
+                    <p class="submitted-message">${messageInput.value}</p>
+      
+`
 
-  document.getElementById('chat-message-list').innerHTML += newMessage;
+  document.getElementById('summary-shipping-address').innerHTML += newShippingAddress;
+  document.getElementById('summary-billing-address').innerHTML += newBillingAddress;
 
-  usernameInput.value = '';
-  messageInput.value = '';
+  // usernameInput.value = '';
+  // messageInput.value = '';
 
-  let submittedMessageArea = document.getElementById('chat-message-list');
-  submittedMessageArea.scrollTop = submittedMessageArea.scrollHeight - submittedMessageArea.clientHeight;
+  $('#nav-summary-tab').tab('show');
+
 };
+
 
 
 

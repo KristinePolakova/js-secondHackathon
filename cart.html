@@ -252,7 +252,7 @@
                             </div>
                         </section>
                     </div>
-
+                    <!-- address -->
                     <div class="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
                         <div class="">
                             <form>
@@ -260,220 +260,205 @@
                                 <div class="col-md-6 px-3">
                                     <div class="form-outline">
                                         <div class="col-xxl-11 col-xl-10 col-md-10 col-sm-9">
-                                            <label for="username">Shipping address</label><br>
+                                            <h5 for="username">Shipping address</h5><br>
                                             <textarea class="col-12" id="username-input" name="input-message" rows="5"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 px-3">
                                     <div class="form-outline">
-                                        <label for="username">Billing address</label><br>
+                                        <h5 for="username">Billing address</h5><br>
                                         <textarea class="col-12" id="input-message" name="input-message" rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
                             </form>
-                            <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
-                                <button class="btn btn-success mb-2 ms-4" onclick="addMessage()">Send</button>
-                            </div>
-                            
-                            <div class="card rounded-3 mb-4">
-                                <div class="card-body p-4">
-                                    <div class="row d-flex justify-content-between align-items-center">
-                                        <div class="col-md-2 col-lg-2 col-xl-2">
-                                            <h5 class="fw-bold mb-0">Total:</h5>
-                                        </div>
-                                        <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
-                                            <h5 class="mb-0">2261.00</h5>
-                                        </div>
-                                    </div>
+                            <div class="row px-5">
+                                <div class="col-md-12 d-flex justify-content-end">
+                                  <!-- <button class="btn btn-success" id="address-button" onclick="window.location.href='nav-summary'">Add Addresses</button> -->
+                                  <button class="btn btn-success" id="address-button" onclick="addAddress()">Add Addresses</button>
                                 </div>
-                            </div>
+                              </div>
                         </div>
                     </div>
+                    <!-- summary -->
                     <div class="tab-pane fade" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">
-                        <div class="wrapper-chat-general">
-                            <div class="chat-submitted-messages" id="chat-message-list">
-                            </div>
-                        </div>
-                        <section class="h-100" style="background-color: #eee;">
-                            <div class="wrapper-chat-general">
-                                    <div class="chat-submitted-messages" id="chat-message-list">
-                                        <div class="col-md-6 px-3">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="Message">Shipping address</label>
-                                                <p id="shipping-address" rows="5"></p>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 px-3">
-                                            <div class="form-outline">
-                                                <label class="form-label" for="Message">Billing address</label>
-                                                <p id="billing-address" rows="5"></p>
-                                            </div>
-                                        </div>
-                        
-                                    </div>
+                        <div class="row p2">
+                            <div class="col-sm-11 col-md-4">
+                                <div id="address">
+                                  <h5>Shipping address</h5>
+                                  <div class="chat-submitted-messages" id="summary-shipping-address"></div>
                                 </div>
-                                <section class="h-100" style="background-color: #eee;">
-                                    <div class="container h-100 py-5">
-                                        <div class="row d-flex justify-content-center align-items-center h-100">
-                                            <div class="col-10">
-                                                <div class="card rounded-3 mb-4">
-                                                    <div class="card-body p-4">
-                                                        <div class="row d-flex justify-content-between align-items-center">
-                                                            <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                <h5 class="mb-0"></h5>
+                              <div id="address">
+                                <h5>Billing address</h5>
+                                <div class="chat-submitted-messages" id="summary-billing-address"></div>
+                              </div>
+                            </div>
+                            <div class="col-sm-12 col-md-8 pt-3">
+                                    <div class="h-100" style="background-color: #eee;">
+                                            <div class="py-5">
+                                                <div class="row d-flex justify-content-center align-items-center h-100">
+                                                    <div class="col-8">
+                                                        <div class="card rounded-3 mb-4">
+                                                            <div class="card-body p-4">
+                                                                <div class="row d-flex justify-content-between align-items-center">
+                                                                    <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                        <h5 class="mb-0"></h5>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                        <h5 class="mb-0">Product</h5>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                        <h5 class="mb-0">Qty</h5>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                        <h5 class="mb-0">Price €</h5>
+                                                                    </div>
+                                                                    <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                        <h5 class="mb-0">Total</h5>
+                                                                    </div>
+                                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                        <a href="#!" class="text-danger"><i class="#"></i></a>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                <h5 class="mb-0">Product</h5>
+                                                        </div>
+                                                            
+                                                            <div class="card rounded-3 mb-4">
+                                                                <div class="card-body p-4">
+                                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                            <img src="images/happy.png"
+                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
+                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                            <button class="btn btn-link px-2"
+                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                                                <i class="fas fa-minus"></i>
+                                                                            </button>
+                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
+                                                                                    class="form-control form-control-sm" />
+                                                                            <button class="btn btn-link px-2"
+                                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                <h5 class="mb-0">Qty</h5>
+                                                            <div class="card rounded-3 mb-4">
+                                                                <div class="card-body p-4">
+                                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                            <img src="images/happy.png"
+                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
+                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                            <button class="btn btn-link px-2"
+                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                                                <i class="fas fa-minus"></i>
+                                                                            </button>
+                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
+                                                                                class="form-control form-control-sm" />
+                                                                            <button class="btn btn-link px-2"
+                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                <h5 class="mb-0">Price €</h5>
+                                        
+                                                            <div class="card rounded-3 mb-4">
+                                                                <div class="card-body p-4">
+                                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                            <img src="images/happy.png"
+                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
+                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                            <button class="btn btn-link px-2"
+                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                                                                                <i class="fas fa-minus"></i>
+                                                                            </button>
+                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
+                                                                                class="form-control form-control-sm" />
+                                                                            <button class="btn btn-link px-2"
+                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                                                                                <i class="fas fa-plus"></i>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                            <h5 class="mb-0">499.00</h5>
+                                                                        </div>
+                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
-                                                            <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                <h5 class="mb-0">Total</h5>
-                                                            </div>
-                                                            <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                <a href="#!" class="text-danger"><i class="#"></i></a>
+                                        
+                                                            <div class="card rounded-3 mb-4">
+                                                                <div class="card-body p-4">
+                                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                            <h5 class="fw-bold mb-0">Total:</h5>
+                                                                        </div>
+                                                                        <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
+                                                                            <h5 class="mb-0">2261.00</h5>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                    
-                                                    <div class="card rounded-3 mb-4">
-                                                        <div class="card-body p-4">
-                                                            <div class="row d-flex justify-content-between align-items-center">
-                                                                <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                    <img src="images/happy.png"
-                                                                        class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                    <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                    <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                    <button class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                        <i class="fas fa-minus"></i>
-                                                                    </button>
-                                                                    <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                            class="form-control form-control-sm" />
-                                                                    <button class="btn btn-link px-2"
-                                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                        <i class="fas fa-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                    <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card rounded-3 mb-4">
-                                                        <div class="card-body p-4">
-                                                            <div class="row d-flex justify-content-between align-items-center">
-                                                                <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                    <img src="images/happy.png"
-                                                                        class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                    <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                    <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                    <button class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                        <i class="fas fa-minus"></i>
-                                                                    </button>
-                                                                    <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                        class="form-control form-control-sm" />
-                                                                    <button class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                        <i class="fas fa-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                    <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                
-                                                    <div class="card rounded-3 mb-4">
-                                                        <div class="card-body p-4">
-                                                            <div class="row d-flex justify-content-between align-items-center">
-                                                                <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                    <img src="images/happy.png"
-                                                                        class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                    <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                    <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                    <button class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                        <i class="fas fa-minus"></i>
-                                                                    </button>
-                                                                    <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                        class="form-control form-control-sm" />
-                                                                    <button class="btn btn-link px-2"
-                                                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                        <i class="fas fa-plus"></i>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                    <h5 class="mb-0">499.00</h5>
-                                                                </div>
-                                                                <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                    <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                
-                                                    <div class="card rounded-3 mb-4">
-                                                        <div class="card-body p-4">
-                                                            <div class="row d-flex justify-content-between align-items-center">
-                                                                <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                    <h5 class="fw-bold mb-0">Total:</h5>
-                                                                </div>
-                                                                <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
-                                                                    <h5 class="mb-0">2261.00</h5>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
+                                       
                                             </div>
-                                        </div>
-                                </section>
-                        </section>
+                        </div>
+                            </section>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
         </div>
-    </div>
+
+        
 
    
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
@@ -481,6 +466,8 @@
             <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
         </div>
     </footer>
+</div>
+
                  
 
         
