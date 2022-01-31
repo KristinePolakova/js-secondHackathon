@@ -61,14 +61,6 @@ function updateCartTotal() {
 
 }
 
-
-
-
-// function removeProduct1() {
-//   const product = document.getElementById('product1');
-//   product1.remove();
-// };
-
 function removeProduct(productDeleteBtn) {
   const product = productDeleteBtn.parentNode.parentNode.parentNode.parentNode
   const summaryProductId = "summary-" + product.id
@@ -78,24 +70,6 @@ function removeProduct(productDeleteBtn) {
   const summaryProduct = document.getElementById(summaryProductId)
   summaryProduct.parentNode.removeChild(summaryProduct)
 }
-
-
-const price = document.getElementById("price")
-// const sumPrice = document.getElementById("sum-price")
-const count = document.getElementById("form1")
-
-let sumPrice = []
-
-function addTotalPrice() {
-  
-}
-
-function decrement() {
-   count--
-   form1.innerHTML = count
-}
-
-
 
 function addAddress() {
 
@@ -121,8 +95,6 @@ function addAddress() {
   document.getElementById('summary-shipping-address').innerHTML += newShippingAddress;
   document.getElementById('summary-billing-address').innerHTML += newBillingAddress;
 
-  // usernameInput.value = '';
-  // messageInput.value = '';
 
   $('#nav-summary-tab').tab('show');
 
