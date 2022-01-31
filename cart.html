@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,16 +10,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
     <link rel='stylesheet' href="css/style.css">
     <link rel="stylesheet" href="./css/cart.css">
 </head>
-<body>
-    <div class="container" >
-        <header class="header-size">
 
+<body>
+    <div class="container d-flex flex-column min-vh-100">
+
+        <header class="header-size">
+    
             <nav class="navbar navbar-expand-lg paws-bcg">
     
                 <div class="container px-4">
@@ -29,7 +33,7 @@
                         <ul class="navbar-nav align-bottom">
                           
                           <li class="nav-item active">
-                            <a class="nav-link font" href="index.html"
+                            <a class="nav-link font" href="#"
                               >Home <span class="sr-only"></span></a>
                           </li>
     
@@ -47,9 +51,8 @@
                 </div>
             </nav> 
         </header>
-    </div>
     
-    <div class="container" style="margin-top: 130px;">
+    <div class="container" style="margin-top: 20px;">
         <div class="row">
             <div class="col-sm-12">
                 <nav aria-label="breadcrumb">
@@ -60,431 +63,400 @@
                 </nav>
             </div>
         </div>
-            <div class="col-md-12 p-3">
-                <h2>Cart</h2>
-            </div>
-          <!-- tabs -->
-          <main>
+        <div class="col-md-12 p-3">
+            <h4>Cart</h4>
+        </div>
+        <!-- tabs -->
+        <main>
             <div class="row">
-              <div class="col">
-                <nav>
-                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                      <button class="nav-link active" 
-                      id="nav-products-tab" 
-                      data-bs-toggle="tab"
-                       data-bs-target="#nav-products"
-                        type="button" 
-                        role="tab" 
-                        aria-controls="nav-products" 
-                        aria-selected="true">Products</button>
-                      <button class="nav-link" 
-                      id="nav-address-tab" 
-                      data-bs-toggle="tab" 
-                      data-bs-target="#nav-address"
-                       type="button" role="tab"
-                        aria-controls="nav-address" 
-                        aria-selected="false">Address</button>
-                      <button class="nav-link"
-                       id="nav-summary-tab"
-                        data-bs-toggle="tab"
-                         data-bs-target="#nav-summary"
-                          type="button" 
-                          role="tab" 
-                          aria-controls="nav-summary"
-                           aria-selected="false">Summary</button>
-                    </div>
-                  </nav>
-                <!-- tab content -->
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade show active" id="nav-products" role="tabpanel" aria-labelledby="nav-products-tab">
-                        <section class="h-100" style="background-color: #eee;">
-                            <div class="container h-100 py-5">
-                                <div class="row d-flex justify-content-center align-items-center h-100">
-                                    <div class="col-10">
+                <div class="col">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-products-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-products" type="button" role="tab" aria-controls="nav-products"
+                                aria-selected="true">Products</button>
+                            <button class="nav-link" id="nav-address-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-address" type="button" role="tab" aria-controls="nav-address"
+                                aria-selected="false">Address</button>
+                            <button class="nav-link" id="nav-summary-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-summary" type="button" role="tab" aria-controls="nav-summary"
+                                aria-selected="false">Summary</button>
+                        </div>
+                    </nav>
+                    <!-- tab content -->
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-products" role="tabpanel"
+                            aria-labelledby="nav-products-tab">
+                            <section class="h-100" style="background-color: #eee;">
+                                <div id="product-list-in-cart" class="container h-100 py-5">
+                                    <div class="row d-flex justify-content-center align-items-center h-100">
+                                        <div class="col-10">
 
-                                        <div class="card rounded-3 mb-4">
-                                            <div class="card-body p-4">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0"></h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <h5 class="mb-0">Product</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                        <h5 class="mb-0">Qty</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">Price €</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">Total</h5>
-                                                    </div>
-                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                        <a href="#!" class="text-danger"><i class="#"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="card rounded-3 mb-4">
-                                            <div class="card-body p-4">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                        <img src="images/happy.png"
-                                                            class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                        <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                        <button class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                            <i class="fas fa-minus"></i>
-                                                        </button>
-                                                        <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                class="form-control form-control-sm" />
-                                                        <button class="btn btn-link px-2"
-                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                            <i class="fas fa-plus"></i>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <div id="price">499.00</div>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <div id="sum-price">499.00</div>
-                                                    </div>
-                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                        <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
+                                            <div class="card rounded-3 mb-4">
+                                                <div class="card-body p-4">
+                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                            <h5 class="mb-0"></h5>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                            <h5 class="mb-0">Product</h5>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                            <h5 class="mb-0">Qty</h5>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <h5 class="mb-0">Price €</h5>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <h5 class="mb-0">Total</h5>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                            <a href="#!" class="text-danger"><i class="#"></i></a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="card rounded-3 mb-4">
-                                            <div class="card-body p-4">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                        <img src="images/happy.png"
-                                                            class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                        <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                        <button class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                            <i class="fas fa-minus"></i>
-                                                        </button>
-                                                        <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                            class="form-control form-control-sm" />
-                                                        <button class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                            <i class="fas fa-plus"></i>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">499.00</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">499.00</h5>
-                                                    </div>
-                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                        <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="card rounded-3 mb-4">
-                                            <div class="card-body p-4">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                        <img src="images/happy.png"
-                                                            class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                        <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                        <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                        <button class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                            <i class="fas fa-minus"></i>
-                                                        </button>
-                                                        <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                            class="form-control form-control-sm" />
-                                                        <button class="btn btn-link px-2"
-                                                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                            <i class="fas fa-plus"></i>
-                                                        </button>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">499.00</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                        <h5 class="mb-0">499.00</h5>
-                                                    </div>
-                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                        <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                    
-                                        <div class="card rounded-3 mb-4">
-                                            <div class="card-body p-4">
-                                                <div class="row d-flex justify-content-between align-items-center">
-                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                        <h5 class="fw-bold mb-0">Total:</h5>
-                                                    </div>
-                                                    <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
-                                                        <h5 class="mb-0">2261.00</h5>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                    <!-- address -->
-                    <div class="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
-                        <div class="">
-                            <form>
-                            <div class="row m-3">
-                                <div class="col-md-6 px-3">
-                                    <div class="form-outline">
-                                        <div class="col-xxl-11 col-xl-10 col-md-10 col-sm-9">
-                                            <h5 for="username">Shipping address</h5><br>
-                                            <textarea class="col-12" id="username-input" name="input-message" rows="5"></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 px-3">
-                                    <div class="form-outline">
-                                        <h5 for="username">Billing address</h5><br>
-                                        <textarea class="col-12" id="input-message" name="input-message" rows="5"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                            </form>
-                            <div class="row px-5">
-                                <div class="col-md-12 d-flex justify-content-end">
-                                  <!-- <button class="btn btn-success" id="address-button" onclick="window.location.href='nav-summary'">Add Addresses</button> -->
-                                  <button class="btn btn-success" id="address-button" onclick="addAddress()">Add Addresses</button>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    <!-- summary -->
-                    <div class="tab-pane fade" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">
-                        <div class="row p2">
-                            <div class="col-sm-11 col-md-4">
-                                <div id="address">
-                                  <h5>Shipping address</h5>
-                                  <div class="chat-submitted-messages" id="summary-shipping-address"></div>
-                                </div>
-                              <div id="address">
-                                <h5>Billing address</h5>
-                                <div class="chat-submitted-messages" id="summary-billing-address"></div>
-                              </div>
-                            </div>
-                            <div class="col-sm-12 col-md-8 pt-3">
-                                    <div class="h-100" style="background-color: #eee;">
-                                            <div class="py-5">
-                                                <div class="row d-flex justify-content-center align-items-center h-100">
-                                                    <div class="col-8">
-                                                        <div class="card rounded-3 mb-4">
-                                                            <div class="card-body p-4">
-                                                                <div class="row d-flex justify-content-between align-items-center">
-                                                                    <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                        <h5 class="mb-0"></h5>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                        <h5 class="mb-0">Product</h5>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                        <h5 class="mb-0">Qty</h5>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                        <h5 class="mb-0">Price €</h5>
-                                                                    </div>
-                                                                    <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                        <h5 class="mb-0">Total</h5>
-                                                                    </div>
-                                                                    <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                        <a href="#!" class="text-danger"><i class="#"></i></a>
-                                                                    </div>
-                                                                </div>
+
+                                            <div id="product1" class="card rounded-3 mb-4">
+                                                <div class="card-body p-4">
+                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                            <img src="images/product-img/paperTunellFront.jpg"
+                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                            <p class="lead fw-normal mb-2">Paper tunnel</p>
+                                                            <p><span class="text-muted">Size: </span>M <span
+                                                                    class="text-muted">Color: </span>Brown</p>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown(); totalPriceChangeProduct1(this.id)">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                            <input id="form1" min="0" name="quantity" value="1"
+                                                                type="number" class="form-control form-control-sm" />
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp(); totalPriceChangeProduct1()">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="price1"><strong>9.99 </strong><span
+                                                                    class="text-secondary">EUR</span>
                                                             </div>
                                                         </div>
-                                                            
-                                                            <div class="card rounded-3 mb-4">
-                                                                <div class="card-body p-4">
-                                                                    <div class="row d-flex justify-content-between align-items-center">
-                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                            <img src="images/happy.png"
-                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                            <button class="btn btn-link px-2"
-                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                                <i class="fas fa-minus"></i>
-                                                                            </button>
-                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                                    class="form-control form-control-sm" />
-                                                                            <button class="btn btn-link px-2"
-                                                                                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                                <i class="fas fa-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="sum-price1" class="fw-bold mb-0">9.99</div>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                            <a  onclick="removeProduct(this)" class="text-danger"><i
+                                                                    class="fas fa-trash fa-lg"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="product2" class="card rounded-3 mb-4">
+                                                <div class="card-body p-4">
+                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                            <img src="images/cat_fish_800x.jpg" class="img-fluid rounded-3"
+                                                                alt="Cotton T-shirt">
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                            <p class="lead fw-normal mb-2">Cat snack - Fish</p>
+                                                            <p><span class="text-muted">Size: </span>L <span
+                                                                    class="text-muted">Color: </span>Fresh</p>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown(); totalPriceChangeProduct2()">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                            <input id="form2" min="0" name="quantity" value="1"
+                                                                type="number" class="form-control form-control-sm" />
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp(); totalPriceChangeProduct2()">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="price2"><strong>7.50 </strong><span
+                                                                    class="text-secondary">EUR</span>
                                                             </div>
-                                                            <div class="card rounded-3 mb-4">
-                                                                <div class="card-body p-4">
-                                                                    <div class="row d-flex justify-content-between align-items-center">
-                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                            <img src="images/happy.png"
-                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                            <button class="btn btn-link px-2"
-                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                                <i class="fas fa-minus"></i>
-                                                                            </button>
-                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                                class="form-control form-control-sm" />
-                                                                            <button class="btn btn-link px-2"
-                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                                <i class="fas fa-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="sum-price2" class="fw-bold mb-0">7.50</div>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                            <a onclick="removeProduct(this)" class="text-danger"><i
+                                                                    class="fas fa-trash fa-lg"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="product3" class="card rounded-3 mb-4">
+                                                <div class="card-body p-4">
+                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                            <img src="images/catspa.jpg" class="img-fluid rounded-3"
+                                                                alt="Cotton T-shirt">
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-3">
+                                                            <p class="lead fw-normal mb-2">Cat Spa Day</p>
+                                                            <p><span class="text-muted">Incuded </span>100% </p>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown(); totalPriceChangeProduct3()">
+                                                                <i class="fas fa-minus"></i>
+                                                            </button>
+                                                            <input id="form3" min="0" name="quantity" value="1"
+                                                                type="number" class="form-control form-control-sm" />
+                                                            <button class="btn btn-link px-2"
+                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp(); totalPriceChangeProduct3()">
+                                                                <i class="fas fa-plus"></i>
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="price3"><strong>100.00 </strong><span
+                                                                    class="text-secondary">EUR</span>
                                                             </div>
-                                        
-                                                            <div class="card rounded-3 mb-4">
-                                                                <div class="card-body p-4">
-                                                                    <div class="row d-flex justify-content-between align-items-center">
-                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                            <img src="images/happy.png"
-                                                                                class="img-fluid rounded-3" alt="Cotton T-shirt">
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-3">
-                                                                            <p class="lead fw-normal mb-2">Basic T-shirt</p>
-                                                                            <p><span class="text-muted">Size: </span>M <span class="text-muted">Color: </span>Grey</p>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
-                                                                            <button class="btn btn-link px-2"
-                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
-                                                                                <i class="fas fa-minus"></i>
-                                                                            </button>
-                                                                            <input id="form1" min="0" name="quantity" value="2" type="number"
-                                                                                class="form-control form-control-sm" />
-                                                                            <button class="btn btn-link px-2"
-                                                                                onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
-                                                                                <i class="fas fa-plus"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-2">
-                                                                            <h5 class="mb-0">499.00</h5>
-                                                                        </div>
-                                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
-                                                                            <a href="#!" class="text-danger"><i class="fas fa-trash fa-lg"></i></a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                        
-                                                            <div class="card rounded-3 mb-4">
-                                                                <div class="card-body p-4">
-                                                                    <div class="row d-flex justify-content-between align-items-center">
-                                                                        <div class="col-md-2 col-lg-2 col-xl-2">
-                                                                            <h5 class="fw-bold mb-0">Total:</h5>
-                                                                        </div>
-                                                                        <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
-                                                                            <h5 class="mb-0">2261.00</h5>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-2">
+                                                            <div id="sum-price3" class="fw-bold mb-0">100.00</div>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                            <a onclick="removeProduct(this)" class="text-danger"><i
+                                                                    class="fas fa-trash fa-lg"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card rounded-3 mb-4">
+                                                <div class="card p-4">
+                                                    <div class="row d-flex justify-content-between align-items-center">
+                                                        <div class="col-md-2 col-lg-2 col-xl-2">
+                                                            <h5 class="fw-bold mb-0">Total:</h5>
+                                                        </div>
+                                                        <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
+                                                            <div id="sum-total" class="fw-bold mb-0">117.49
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                       
                                             </div>
-                        </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </section>
                         </div>
-
+                        <!-- address -->
+                        <div class="tab-pane fade" id="nav-address" role="tabpanel" aria-labelledby="nav-address-tab">
+                            <div class="">
+                                <form>
+                                    <div class="row m-3">
+                                        <div class="col-md-6 px-3">
+                                            <div class="form-outline">
+                                                <div class="col-xxl-11 col-xl-10 col-md-10 col-sm-9">
+                                                    <h5 for="username">Shipping address</h5><br>
+                                                    <textarea class="col-12" id="username-input" name="input-message"
+                                                        rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 px-3">
+                                            <div class="form-outline">
+                                                <h5 for="username">Billing address</h5><br>
+                                                <textarea class="col-12" id="input-message" name="input-message"
+                                                    rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="row px-5">
+                                    <div class="col-md-12 d-flex justify-content-end">
+                                        <!-- <button class="btn btn-success" id="address-button" onclick="window.location.href='nav-summary'">Add Addresses</button> -->
+                                        <button class="btn btn-success" id="address-button" onclick="addAddress()">Add
+                                            Addresses</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- summary -->
+                        <div class="tab-pane fade" id="nav-summary" role="tabpanel" aria-labelledby="nav-summary-tab">
+                            <div class="row p2">
+                                <div class="col-sm-11 col-md-4">
+                                    <div id="address">
+                                        <h5>Shipping address</h5>
+                                        <div class="chat-submitted-messages" id="summary-shipping-address"></div>
+                                    </div>
+                                    <div id="address">
+                                        <h5>Billing address</h5>
+                                        <div class="chat-submitted-messages" id="summary-billing-address"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-8 pt-3">
+                                    <section class="h-100" style="background-color: #eee;">
+                                        <div id="product-list-in-cart" class="container h-100 py-5">
+                                            <div class="row d-flex justify-content-center align-items-center h-100">
+                                                <div class="col-10">
+        
+                                                    <div class="card rounded-3 mb-4">
+                                                        <div class="card-body p-4">
+                                                            <div class="row d-flex justify-content-between align-items-center">
+                                                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <h5 class="mb-0"></h5>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                    <h5 class="mb-0">Product</h5>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                    <h5 class="mb-0">Qty</h5>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <h5 class="mb-0">Price €</h5>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <h5 class="mb-0">Total</h5>
+                                                                </div>
+                                                                <!-- <div class="col-md-1 col-lg-1 col-xl-1 text-end">
+                                                                    <a href="#!" class="text-danger"><i class="#"></i></a>
+                                                                </div> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div id="summary-product1" class="card rounded-3 mb-4">
+                                                        <div class="card-body p-4">
+                                                            <div class="row d-flex justify-content-between align-items-center">
+                                                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <img src="images/product-img/paperTunellFront.jpg"
+                                                                        class="img-fluid rounded-3" alt="Cotton T-shirt">
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                    <p class="lead fw-normal mb-2">Paper tunnel</p>
+                                                                    <p><span class="text-muted">Size: </span>M <span
+                                                                            class="text-muted">Color: </span>Brown</p>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                    <input id="form1" min="0" name="quantity" value="1"
+                                                                        type="number" class="form-control form-control-sm" />
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-price1"><strong>9.99 </strong><span
+                                                                            class="text-secondary">EUR</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-sum-price1" class="fw-bold mb-0">9.99</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="summary-product2" class="card rounded-3 mb-4">
+                                                        <div class="card-body p-4">
+                                                            <div class="row d-flex justify-content-between align-items-center">
+                                                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <img src="images/cat_fish_800x.jpg" class="img-fluid rounded-3"
+                                                                        alt="Cotton T-shirt">
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                    <p class="lead fw-normal mb-2">Cat snack - Fish</p>
+                                                                    <p><span class="text-muted">Size: </span>L <span
+                                                                            class="text-muted">Color: </span>Fresh</p>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                    <input id="form2" min="0" name="quantity" value="1"
+                                                                        type="number" class="form-control form-control-sm" />
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-price2"><strong>7.50 </strong><span
+                                                                            class="text-secondary">EUR</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-sum-price2" class="fw-bold mb-0">7.50</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div id="summary-product3" class="card rounded-3 mb-4">
+                                                        <div class="card-body p-4">
+                                                            <div class="row d-flex justify-content-between align-items-center">
+                                                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <img src="images/catspa.jpg" class="img-fluid rounded-3"
+                                                                        alt="Cotton T-shirt">
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-3">
+                                                                    <p class="lead fw-normal mb-2">Cat Spa Day</p>
+                                                                    <p><span class="text-muted">Incuded </span>100% </p>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                                                                    <input id="form3" min="0" name="quantity" value="1"
+                                                                        type="number" class="form-control form-control-sm" />
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-price3"><strong>100.00 </strong><span
+                                                                            class="text-secondary">EUR</span>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-2">
+                                                                    <div id="summary-sum-price3" class="fw-bold mb-0">100.00</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="card rounded-3 mb-4">
+                                                        <div class="card p-4">
+                                                            <div class="row d-flex justify-content-between align-items-center">
+                                                                <div class="col-md-2 col-lg-2 col-xl-2">
+                                                                    <h5 class="fw-bold mb-0">Total:</h5>
+                                                                </div>
+                                                                <div class="col-md-3 col-lg-2 col-xl-3 offset-lg-1">
+                                                                    <div id="summary-sum-total" class="fw-bold mb-0" style="text-align: center;">117.49
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        
-
-   
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
-        <div>
-            <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
-        </div>
-    </footer>
-</div>
-
-                 
-
-        
-        
-        
-
-      
-
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div>
+                <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
+            </div>
+        </footer>
+    </div>
     
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
-    <script src="./js/cart.js"></script>        
-            
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script src="./js/cart.js"></script>
+
 </body>
+
 </html>
