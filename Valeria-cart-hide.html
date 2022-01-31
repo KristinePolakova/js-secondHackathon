@@ -1,0 +1,136 @@
+<table class="table">
+    <thead>
+      <tr class="cart-row">
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Product</th>
+        <th scope="col">Qty</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody class="cart-items">
+      <tr id="product-1" class="cart-row">
+        <th scope="row">1</th>
+        <td><img src="images/catecnack.jpg" width="90" height="90" alt=""></td>
+        <td>Cat Snaks</td>
+        <td>
+            <div class="col-md-5 d-flex">
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input id="form1" min="0" name="quantity" value="1" type="number"
+                    class="form-control form-control-sm quantity-input"/>
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </td>
+        <td class="price">5.00</td>
+        <td class="product-total-price">5.00</td>
+        <td><button class="btn btn-danger" onclick="removeProduct1()">Remove</button></td>
+      </tr>
+      <tr id="product-2" class="cart-row">
+        <th scope="row">2</th>
+        <td><img src="images/product-img/fancyCat.png" width="90" height="90" alt=""></td>
+        <td>Paper Tunell</td>
+        <td>
+            <div class="col-md-5 d-flex">
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input id="form1" min="0" name="quantity" value="1" type="number"
+                    class="form-control form-control-sm quantity-input"/>
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </td>
+        <td class="price">9.50</td>
+        <td class="product-total-price">9.50</td>
+        <td><button class="btn btn-danger" onclick="removeProduct2()">Remove</button></td>
+      </tr>
+      <tr id="product-3" class="cart-row">
+        <th scope="row" >3</th>
+        <td><img src="images/cat_fish_800x.jpg" width="90" height="90" alt=""></td>
+        <td>Fish</td>
+        <td>
+            <div class="col-md-5 d-flex">
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <input id="form1" min="0" name="quantity" value="1" type="number"
+                    class="form-control form-control-sm quantity-input"/>
+                <button class="btn btn-link px-2"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </td>
+        <td class="price">8.00</td>
+        <td class="product-total-price">8.00</td>
+        <td><button class="btn btn-danger" onclick="removeProduct3()">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="col-md-10 d-flex justify-content-end cart-total">
+    <h2>Total: <span class="cart-total-price">0.00</span></h2>
+  </div>
+
+
+ <!--total-->
+
+ <div class="col-sm-12 col-md-8 pt-3">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Product</th>
+          <th scope="col">Qty</th>
+          <th scope="col">Price</th>
+          <th scope="col">Total</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td><img src="images/catecnack.jpg" width="90" height="90" alt=""></td>
+          <td>Paper Tunell</td>
+          <td>@mdo</td>
+          <td>9.99</td>
+          <td>9.99</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td><img src="images/product-img/fancyCat.png" width="90" height="90" alt=""></td>
+          <td>Paper Tunell</td>
+          <td>@mdo</td>
+          <td>9.99</td>
+          <td>9.99</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td><img src="images/cat_fish_800x.jpg" width="90" height="90" alt=""></td>
+          <td>Fish</td>
+          <td>@mdo</td>
+          <td>9.99</td>
+          <td>9.99</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row">
+    <div class="col-md-11 d-flex justify-content-end">
+    <h2>Total: 125.54</h2>
+    </div>
+  </div>

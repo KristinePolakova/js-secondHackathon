@@ -11,24 +11,24 @@
 }
 
 .chat-submitted-messages {
-    height: 402px;
+    height: 150px;
     flex-direction: column;
     display: flex;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     flex-shrink: 0;
-    border: 3px solid lightgrey;
+    /* border: 3px solid lightgrey; */
     margin: 0px;
 }
 
 .user-input-area {
     height: 158px;
-    border: 3px solid lightgrey;
+    /* border: 3px solid lightgrey; */
     margin-top: 3px;
 }
 
-.username-input, .input-message {
+/* .username-input, .input-message {
     border: 3px solid darkgray;
-}
+} */
 
 .username-submitted, .submitted-message, .timestamp, label {
     font-size: 13px;
@@ -50,4 +50,12 @@
 
 .wrapper-mid-section {
     min-height: 80vh;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+#address {
+    padding: 86px 12px 0px;
 }

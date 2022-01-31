@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purrfect Home Page</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/headers/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel-rtl/">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+        <header class="header-size">
+
+            <nav class="navbar navbar-expand-lg paws-bcg">
+    
+                <div class="container px-4">
+    
+                    <a class="navbar-brand mt-2" href="index.html"><img src="./images/purrfect-logo-openfile-60.png" id="logo" class="img-responsive" alt="Purrfect Logo"></a>                  
+                      
+                      <div class="collapse navbar-collapse justify-content-end align-end" id="navbarNav">
+                        <ul class="navbar-nav align-bottom">
+                          
+                          <li class="nav-item active">
+                            <a class="nav-link font" href="index.html"
+                              >Home <span class="sr-only"></span></a>
+                          </li>
+    
+                          <li class="nav-item">
+                            <a class="nav-link font" href="./three_categories.html">Categories</a>
+                          </li>
+    
+                          <li class="nav-item">
+                            <a class="nav-link font" href="./cart.html">Cart</a>
+                          </li>
+    
+                        </ul>
+                      </div>
+                      
+                </div>
+            </nav> 
+        </header>
+   
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 p-3">
+            <h2>Cart</h2>
+        </div>
+        </div>
+             <div class="row">
+            <div class="col">
+              <nav>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                  <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" 
+                    aria-selected="true">Products</button>
+                  <button class="nav-link" 
+                  id="nav-profile-tab" 
+                  data-bs-toggle="tab" 
+                  data-bs-target="#nav-profile"
+                   type="button" role="tab"
+                    aria-controls="nav-profile" 
+                    aria-selected="false">Address</button>
+                  <button class="nav-link"
+                   id="nav-contact-tab"
+                    data-bs-toggle="tab"
+                     data-bs-target="#nav-contact"
+                      type="button" 
+                      role="tab" 
+                      aria-controls="nav-contact"
+                       aria-selected="false">Summary</button>
+                </div>
+              </nav>
+
+              <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                  <div class="row p-5">
+                    <div class="col-md-10 text-center" id="delete-innhtml">
+                      <!----hidden cart in js--> 
+                          <img src="./images/cart.png" class="img-fluid" alt="Cart is empty" width = "30%">
+                          <h1>Ouch, your cart is empty.</h1>
+                          <h2><a href="./one_category.html" class="btn btn-danger">Add products</a></h2>
+                    </div>
+                    
+                  </div>
+                  </div>
+                  
+                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <!-- address -->
+                  <form>
+                    <div class="row m-3">
+                      <div class="col-md-6 px-3">
+                        <div class="form-outline">
+                          <label class="form-label" for="Message">Shipping address</label>
+                          <textarea class="form-control" id="message" rows="5" id="shipping-address"></textarea>
+                        </div>
+                      </div>
+                      <div class="col-md-6 px-3">
+                        <div class="form-outline">
+                          <label class="form-label" for="Message">Billing address</label>
+                          <textarea class="form-control" id="message" rows="5" id="billing-address"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row px-5">
+                      <div class="col-md-12 d-flex justify-content-end">
+                        <button class="btn btn-success" id="address-button" onclick="addAddress()">Add Addresses</button>
+                      </div>
+                    </div>
+                </form>
+                </div>
+                <!-- summary -->
+                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                  <div class="row p-2">
+                    <div class="col-sm-11 col-md-4">
+                      <div>
+                        <h5>Shipping address</h5>
+                        <div id="summary-shipping-address"></div>
+                      </div>
+                    <div>
+                      <h5>Billing address</h5>
+                      <div id="summary-billing-address"></div>
+                    </div>
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+ 
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
+            <div>
+                <span class="text-muted">&copy; 2021 Copyright: Kristīne | Laura | Baiba | Valeria</span>
+            </div>
+        </footer>
+                     
+    </div>
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
+    <script src="./js/cartValeria.js"></script>
+</body>
+</html>
