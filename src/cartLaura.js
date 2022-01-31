@@ -59,7 +59,6 @@ const calculateTotalSumProduct2 = () => {
     updatedTotalCartValueProduct2 = product2Count.value * product2Price;
 
     totalCartValue.innerHTML = updatedTotalCartValueProduct1 + updatedTotalCartValueProduct2 + updatedTotalCartValueProduct3 + updatedTotalCartValueProduct4 + updatedTotalCartValueProduct5;
-
 }
 
 const calculateTotalSumProduct5 = () => {
