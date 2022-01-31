@@ -86,12 +86,13 @@
                             <th scope="col">Product</th>
                             <th scope="col">Qty</th>
                             <th scope="col">Price</th>
+                            <th scope="col">VAT</th>
                             <th scope="col">Total</th>
                             <th scope="col"></th>
                           </tr>
                         </thead>
 
-                        <tbody class="cart-items">
+                        <tbody class="cart-items" id="cart-items">
                           <tr id="product-1" class="cart-row">
                             <th scope="row">1</th>
                             <td><img src="images/catecnack.jpg" width="90" height="90" alt=""></td>
@@ -102,16 +103,17 @@
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     <input id="product1Quantity" min="0" name="quantity" value="1" type="number"
-                                        class="form-control form-control-sm quantity-input"/>
+                                        class="form-control form-control-sm cart-quantity-input"/>
                                     <button class="btn btn-link px-2 quantity-change">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
 
                             </td>
-                            <td class="price" id="product-1-price">5.00</td>
-                            <td class="product-total-price" id="product1TotalPrice">5.00</td>
-                            <td><button class="btn btn-danger" onclick="removeProduct1()">Remove</button></td>
+                            <td class="cart-price" id="product-1-price">8.25 &#128;</td>
+                            <td class="vat" id="product-1-vat">1.73</td>
+                            <td class="product-total-price" id="product1TotalPrice">9.99 &#128;</td>
+                            <td><button class="btn btn-danger rem">Remove</button></td>
                           </tr>
                           <tr id="product-2" class="cart-row">
                             <th scope="row">2</th>
@@ -119,21 +121,20 @@
                             <td>Paper Tunell</td>
                             <td>
                                 <div class="col-md-5 d-flex">
-                                    <button class="btn btn-link px-2 quantity-change"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown(); quantityChangeProduct2();">
+                                    <button class="btn btn-link px-2 quantity-change">
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     <input id="product2Quantity" min="0" name="quantity" value="1" type="number"
-                                        class="form-control form-control-sm quantity-input"/>
-                                    <button class="btn btn-link px-2 quantity-change"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp(); quantityChangeProduct2();">
+                                        class="form-control form-control-sm cart-quantity-input"/>
+                                    <button class="btn btn-link px-2 quantity-change">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </td>
-                            <td class="price" id="product-2-price">9.50</td>
-                            <td class="product-total-price" id="product2TotalPrice">9.50</td>
-                            <td><button class="btn btn-danger" onclick="removeProduct2()">Remove</button></td>
+                            <td class="cart-price" id="product-2-price">4.30 &#128;</td>
+                            <td class="vat" id="product-2-vat">0.90</td>
+                            <td class="product-total-price" id="product2TotalPrice">5.20 &#128;</td>
+                            <td><button class="btn btn-danger rem">Remove</button></td>
                           </tr>
                           <tr id="product-3" class="cart-row">
                             <th scope="row" >3</th>
@@ -141,29 +142,32 @@
                             <td>Fish</td>
                             <td>
                                 <div class="col-md-5 d-flex">
-                                    <button class="btn btn-link px-2 quantity-change"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepDown(); quantityChangeProduct3();">
+                                    <button class="btn btn-link px-2 quantity-change">
                                         <i class="fas fa-minus"></i>
                                     </button>
                                     <input id="product3Quantity" min="0" name="quantity" value="1" type="number"
-                                        class="form-control form-control-sm quantity-input"/>
-                                    <button class="btn btn-link px-2 quantity-change"
-                                        onclick="this.parentNode.querySelector('input[type=number]').stepUp(); quantityChangeProduct3();">
+                                        class="form-control form-control-sm cart-quantity-input"/>
+                                    <button class="btn btn-link px-2 quantity-change">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </td>
-                            <td class="price" id="product-3-price">8.00</td>
-                            <td class="product-total-price" id="product3TotalPrice">8.00</td>
-                            <td><button class="btn btn-danger" onclick="removeProduct3()">Remove</button></td>
+                            <td class="cart-price" id="product-3-price">1.65 &#128;</td>
+                            <td class="vat" id="product-3-vat">0.35</td>
+                            <td class="product-total-price" id="product3TotalPrice">2.00 &#128;</td>
+                            <td><button class="btn btn-danger rem">Remove</button></td>
                           </tr>
                         </tbody>
+                        
                       </table>
                     </div>
                     <div class="col-md-10 d-flex justify-content-end cart-total">
-                      <h2>Total: <span class="cart-total-price" id="totalPrice">0.00</span></h2>
+                      <h4>Shipping price: <span class="shipping" id="shippingPrice">3.00 &#128;</span></h4>
                     </div>
-                    <div class="text-end"><p><a href="./one_category.html" class="btn btn-danger">Next</a></p></div>
+                    <div class="col-md-10 d-flex justify-content-end cart-total">
+                      <h2>Total: <span class="cart-total-price" id="totalPrice">0.00 &#128;</span></h2>
+                    </div>
+                    <div class="text-end"><p><a href="#shipping" class="btn btn-danger">Next</a></p></div>
                   </div>
                   </div>
                   
@@ -186,7 +190,7 @@
                     </div>
                     <div class="row px-5">
                       <div class="col-md-12 d-flex justify-content-end">
-                        <button class="btn btn-success" id="address-button" onclick="addAddress()">Add Addresses</button>
+                        <button class="btn btn-success" id="address-button">Add Addresses</button>
                       </div>
                     </div>
                 </form>
@@ -250,13 +254,12 @@
                     <div class="col-md-11 d-flex justify-content-end">
                     <h2>Total: 125.54</h2>
                     </div>
+                    <div class="text-end"><p><a class="btn btn-danger">Buy it now</a></p></div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          
+          </div>          
  
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-4">
             <div>
@@ -264,25 +267,13 @@
             </div>
         </footer>
                      
-    </div>
+      </div>
 
-  
-
-        
-        
-        
-
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
       
-
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>   
-     <script src="js/cartKristine.js"></script>           
+     <script src="./js/cartValeria.js"></script>           
             
 </body>
 </html>
